@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #181817;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.game-title {
+  color: white;
+  font-weight: 400;
+  text-align: center;
+}
+
+.game-sub-title {
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 400;
+}
+
+#result {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#player,
+#computer {
+  width: 350px;
+  height: 300px;
+  margin: 2px;
+  border-radius: 7px;
+  background-color: rgba(35, 35, 35, 0.9);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  text-align: center;
+  padding: 1rem 0;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.score {
+  font-weight: 400;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+}
+
+.info-result {
+  font-size: 26px;
+  margin-top: 1.5rem;
+  color: white;
+}
+
+.choose-text {
+  text-align: center;
+  color: white;
+  margin: 2rem 0;
+  font-weight: 400;
+}
+
+.dots-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.dots {
+  background-color: white;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.margin {
+  margin-bottom: 6px;
+}
+
+.dots:nth-of-type(2) {
+  margin: 0 3rem;
+}
