@@ -1,22 +1,22 @@
 const dots = document.querySelectorAll(".dots");
-const mainResult = document.querySelector(".main-result");
-const infoResult = document.querySelector(".info-result");
+const playerMain = document.getElementById("player-main");
+const playerInfo = document.getElementById("player-info");
+
+const computerMain = document.getElementById("computer-main");
+const computerInfo = document.getElementById("computer-info");
 
 dots.forEach((d) => {
   d.onclick = () => {
-    let user = new User(d.classList[1]); // 1
-    mainResult.innerText = d.innerText;
-    infoResult.innerText = d.classList[1];
+    playerMain.innerText = d.innerText;
+    playerInfo.innerText = d.classList[1];
+    computerChoice();
   };
 });
 
-// 1
-class User {
-  constructor(selected) {
-    this.selected = selected;
-  }
-
-  showSelected() {
-    console.log(this.selected);
-  }
-}
+const computerChoice = () => {
+  const optionTexts = ["rock", "paper", "scissors"];
+  const optionEmojis = ["🗿", "📜", "✂️"];
+  let randomNumber = Math.floor(Math.random() * 3);
+  computerMain.innerText = optionEmojis[randomNumber];
+  computerInfo.innerText = optionTexts[randomNumber];
+};
