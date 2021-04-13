@@ -2,8 +2,8 @@ const dots = document.querySelectorAll(".dots");
 const playerMain = document.getElementById("player-main");
 const playerInfo = document.getElementById("player-info");
 
-// const computerMain = document.getElementById("computer-main");
-// const computerInfo = document.getElementById("computer-info");
+const computerMain = document.getElementById("computer-main");
+const computerInfo = document.getElementById("computer-info");
 
 const SELECTIONS = [
   {
@@ -43,4 +43,23 @@ const handleSelect = (selectedItem, item) => {
       });
     }
   });
+  let computerChoice = computer();
+  compare(selectedItem, computerChoice);
+};
+
+const computer = () => {
+  let randomNumber = Math.floor(Math.random() * 3);
+  computerInfo.innerText = SELECTIONS[randomNumber].name;
+  computerMain.innerText = SELECTIONS[randomNumber].emoji;
+  return SELECTIONS[randomNumber];
+};
+
+const compare = (selectedItem, computerChoice) => {
+  if (computerChoice.name === selectedItem) {
+    console.log("TIE");
+  } else if (computerChoice.beats === selectedItem) {
+    console.log("COMPUTER WIN");
+  } else {
+    console.log("PLAYER WIN");
+  }
 };
