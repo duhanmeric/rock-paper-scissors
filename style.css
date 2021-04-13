@@ -140,13 +140,8 @@ body {
     height: 330px;
   }
 
-  .game-sub-title,
   .choose-text {
     font-size: 26px;
-  }
-
-  .game-sub-title {
-    margin-bottom: 3rem;
   }
 
   .choose-text {
@@ -169,15 +164,10 @@ body {
     height: 330px;
   }
 
-  .game-sub-title {
-    margin-bottom: 1rem;
-  }
-
   .choose-text {
     margin-top: 1rem;
   }
 
-  .game-sub-title,
   .choose-text {
     font-size: 20px;
   }

@@ -1,9 +1,15 @@
 const dots = document.querySelectorAll(".dots");
+
 const playerMain = document.getElementById("player-main");
 const playerInfo = document.getElementById("player-info");
+const playerScore = document.querySelector("#player .score span");
 
 const computerMain = document.getElementById("computer-main");
 const computerInfo = document.getElementById("computer-info");
+const computerScore = document.querySelector("#computer .score span");
+
+var pScore = 0; // playerscore
+var cScore = 0; // computerscore
 
 const SELECTIONS = [
   {
@@ -58,8 +64,12 @@ const compare = (selectedItem, computerChoice) => {
   if (computerChoice.name === selectedItem) {
     console.log("TIE");
   } else if (computerChoice.beats === selectedItem) {
-    console.log("COMPUTER WIN");
+    cScore++;
+    computerScore.innerText = cScore;
+    console.log("COMPUTER WIN", cScore);
   } else {
+    pScore++;
+    playerScore.innerText = pScore;
     console.log("PLAYER WIN");
   }
 };
