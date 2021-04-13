@@ -55,7 +55,7 @@ const handleSelect = (selectedItem, item) => {
 };
 
 const computer = () => {
-  let randomNumber = Math.floor(Math.random() * 3);
+  var randomNumber = Math.floor(Math.random() * 3);
   computerInfo.innerText = SELECTIONS[randomNumber].name;
   computerMain.innerText = SELECTIONS[randomNumber].emoji;
   return SELECTIONS[randomNumber];
