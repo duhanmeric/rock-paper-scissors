@@ -1,4 +1,5 @@
 const dots = document.querySelectorAll(".dots");
+const whoWin = document.querySelector(".game-sub-title");
 
 const playerMain = document.getElementById("player-main");
 const playerInfo = document.getElementById("player-info");
@@ -62,14 +63,14 @@ const computer = () => {
 
 const compare = (selectedItem, computerChoice) => {
   if (computerChoice.name === selectedItem) {
-    console.log("TIE");
+    whoWin.innerText = "TIE";
   } else if (computerChoice.beats === selectedItem) {
     cScore++;
     computerScore.innerText = cScore;
-    console.log("COMPUTER WIN", cScore);
+    whoWin.innerText = "COMPUTER WIN";
   } else {
     pScore++;
     playerScore.innerText = pScore;
-    console.log("PLAYER WIN");
+    whoWin.innerText = "YOU WIN";
   }
 };

@@ -81,13 +81,6 @@ body {
   text-transform: uppercase;
 }
 
-.choose-text {
-  text-align: center;
-  color: white;
-  margin: 2rem 0;
-  font-weight: 400;
-}
-
 .dots-wrapper {
   display: flex;
   justify-content: center;
@@ -140,12 +133,12 @@ body {
     height: 330px;
   }
 
-  .choose-text {
+  .game-sub-title {
     font-size: 26px;
   }
 
-  .choose-text {
-    margin-top: 3rem;
+  .game-sub-title {
+    margin-bottom: 3rem;
   }
 
   .score {
@@ -164,11 +157,11 @@ body {
     height: 330px;
   }
 
-  .choose-text {
-    margin-top: 1rem;
+  .game-sub-title {
+    margin-bottom: 1rem;
   }
 
-  .choose-text {
+  .game-sub-title {
     font-size: 20px;
   }
 }
