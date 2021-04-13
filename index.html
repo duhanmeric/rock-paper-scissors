@@ -34,9 +34,15 @@
       </div>
       <h3 class="choose-text">Choose One!</h3>
       <div class="dots-wrapper">
-        <div class="dots rock"><span class="margin">🗿</span></div>
-        <div class="dots paper"><span class="margin">📜</span></div>
-        <div class="dots scissors"><span class="margin">✂️</span></div>
+        <div class="dots rock" onclick="handleSelect('ROCK', this)">
+          <span class="margin">🗿</span>
+        </div>
+        <div class="dots paper" onclick="handleSelect('PAPER', this)">
+          <span class="margin">📜</span>
+        </div>
+        <div class="dots scissors" onclick="handleSelect('SCISSORS', this)">
+          <span class="margin">✂️</span>
+        </div>
       </div>
     </div>
     <script src="app.js"></script>

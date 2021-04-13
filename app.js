@@ -2,55 +2,45 @@ const dots = document.querySelectorAll(".dots");
 const playerMain = document.getElementById("player-main");
 const playerInfo = document.getElementById("player-info");
 
-const computerMain = document.getElementById("computer-main");
-const computerInfo = document.getElementById("computer-info");
+// const computerMain = document.getElementById("computer-main");
+// const computerInfo = document.getElementById("computer-info");
 
 const SELECTIONS = [
   {
     name: "ROCK",
     emoji: "🗿",
     beats: "SCISSORS",
+    selected: false,
   },
   {
     name: "PAPER",
     emoji: "📜",
     beats: "ROCK",
+    selected: false,
   },
   {
     name: "SCISSORS",
     emoji: "✂️",
     beats: "PAPER",
+    selected: false,
   },
 ];
 
-dots.forEach((d) => {
-  d.onclick = () => {
-    playerMain.innerText = d.innerText;
-    playerInfo.innerText = d.classList[1];
-    const selectionName = playerInfo.innerText;
-    const selection = SELECTIONS.find(
-      (selection) => selection.name === selectionName
-    );
-    let computer = computerChoice();
-    compareChoices(selection, computer);
-  };
-});
-
-const computerChoice = () => {
-  let randomNumber = Math.floor(Math.random() * 3);
-  computerMain.innerText = SELECTIONS[randomNumber].emoji;
-  computerInfo.innerText = SELECTIONS[randomNumber].name;
-  return SELECTIONS[randomNumber];
-};
-
-const compareChoices = (player, computer) => {
-  if (player === computer) {
-    console.log("TIE");
-  } else {
-    if (player.beats === computer.name) {
-      console.log("PLAYER WIN");
-    } else {
-      console.log("COMPUTER WIN");
+const handleSelect = (selectedItem, item) => {
+  SELECTIONS.forEach((selection) => {
+    if (selectedItem === selection.name) {
+      playerMain.innerText = selection.emoji;
+      playerInfo.innerText = selection.name;
+      selection.selected = true;
+      dots.forEach((d) => {
+        if (selection.name === d.classList[1].toUpperCase()) {
+          if (selection.selected) {
+            d.classList.add("selected");
+          }
+        } else {
+          d.classList.remove("selected");
+        }
+      });
     }
-  }
+  });
 };

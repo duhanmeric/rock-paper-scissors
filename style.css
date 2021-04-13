@@ -107,6 +107,10 @@ body {
   cursor: pointer;
 }
 
+.dots.selected {
+  background-color: yellow;
+}
+
 .margin {
   margin-bottom: 6px;
 }
