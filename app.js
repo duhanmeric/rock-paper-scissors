@@ -15,13 +15,13 @@ var cScore = 0; // computerscore
 const SELECTIONS = [
   {
     name: "ROCK",
-    emoji: "🗿",
+    emoji: "💎",
     beats: "SCISSORS",
     selected: false,
   },
   {
     name: "PAPER",
-    emoji: "📜",
+    emoji: "🧻",
     beats: "ROCK",
     selected: false,
   },
